@@ -15,9 +15,8 @@ class MedicamentController extends Controller
      */
     public function index()
     {
-        $medicaments = Medicament::latest()->paginate(5);
-        $familles=Famille::All();
-        return view('medicaments.index', ['familles'=>$familles,'medicaments'=> $medicaments])
+        $medicaments = Medicament::latest()->with(['famille'])->paginate(5);
+        return view('medicaments.index', compact('medicaments'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -62,8 +61,8 @@ class MedicamentController extends Controller
      */
     public function show(Medicament $medicament)
     {
-        $familles = Famille::all();
-        return View('medicaments.show',['familles'=>$familles,'medicament'=> $medicament]);
+        $medicament->load('famille');
+        return View('medicaments.show', compact('medicament'));
     }
 
     /**

@@ -41,7 +41,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Famille du médicament:</strong>
-                {{ $familles[($medicament->idFamille)-1]->libelle }}
+                {{ $medicament->famille->libelle }}
             </div>
         </div>
 

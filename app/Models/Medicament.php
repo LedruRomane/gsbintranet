@@ -22,4 +22,9 @@ class Medicament extends Model
         'contreIndications',
         'idFamille'
     ];
+
+    public function famille()
+    {
+        return $this->belongsTo(Famille::class, 'idFamille','id');
+    }
 }

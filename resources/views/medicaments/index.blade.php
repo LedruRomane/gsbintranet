@@ -35,7 +35,7 @@
                 <td>{{ $medicament->composition }}</td>
                 <td>{{ $medicament->effets }}</td>
                 <td>{{ $medicament->contreIndications }}</td>
-                <td>{{ $familles[($medicament->idFamille)-1]->libelle }}</td>
+                <td>{{ $medicament->famille->libelle }}</td>
                 <td>
                     <form action="{{ route('medicaments.destroy', $medicament->id) }}" method="POST">
 
