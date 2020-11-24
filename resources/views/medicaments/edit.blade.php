@@ -56,7 +56,6 @@
                 </div>
             </div>
             <div class="form-group">
-                {!! Form::Label('medicaments', 'Familles:') !!}
                 <select class="form-control" name="idFamille">
                     @foreach($familles as $famille)
                         <option value="{{$famille->id}}">{{$famille->libelle}}</option>
@@ -64,7 +63,7 @@
                 </select>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Soumettre</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
             </div>
         </div>
 

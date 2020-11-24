@@ -73,7 +73,8 @@ class MedicamentController extends Controller
      */
     public function edit(Medicament $medicament)
     {
-        return view('medicaments.edit', compact('medicament'));
+        $familles = Famille::All();
+        return view('medicaments.edit', compact('medicament',['familles'=>$familles]));
     }
 
     /**
