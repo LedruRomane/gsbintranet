@@ -9,7 +9,7 @@ class Famille extends Model
 {
     use HasFactory;
 
-    protected $table = 'medicaments';
+    protected $table = 'familles';
     public $timestamps = true;
 
     protected $casts = [
