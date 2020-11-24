@@ -16,9 +16,9 @@ class CreateMedicamentsTable extends Migration
         Schema::create('medicaments', function (Blueprint $table) {
             $table->id();
             $table->string('nomCommercial',80);
-            $table->string('composition', 100);
-            $table->string('effets',100);
-            $table->string('contreIndications',100);
+            $table->string('composition', 500);
+            $table->string('effets',500);
+            $table->string('contreIndications',500);
             $table->timestamps();
 
             $table->unsignedBigInteger('idFamille');

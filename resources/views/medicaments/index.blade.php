@@ -22,10 +22,10 @@
     <table class="table table-bordered table-responsive-lg">
         <tr>
             <th>Numéro</th>
-            <th>nomCommercial</th>
-            <th>composition</th>
-            <th>effets</th>
-            <th>contreIndications</th>
+            <th>Nom Commercial</th>
+            <th>Composition</th>
+            <th>Effets</th>
+            <th>Contre Indications</th>
             <th>Famille</th>
         </tr>
         @foreach ($medicaments as $medicament)
@@ -35,7 +35,7 @@
                 <td>{{ $medicament->composition }}</td>
                 <td>{{ $medicament->effets }}</td>
                 <td>{{ $medicament->contreIndications }}</td>
-                <td>{{ $medicament->idFamille }}</td>
+                <td>{{ $familles[($medicament->idFamille)-1]->libelle }}</td>
                 <td>
                     <form action="{{ route('medicaments.destroy', $medicament->id) }}" method="POST">
 

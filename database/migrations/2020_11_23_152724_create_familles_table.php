@@ -13,7 +13,7 @@ class CreateFamillesTable extends Migration
      */
     public function up()
     {
-        Schema::create('medicaments', function (Blueprint $table) {
+        Schema::create('familles', function (Blueprint $table) {
             $table->id();
             $table->string('reference', 255);
             $table->string('libelle', 80);
@@ -28,6 +28,6 @@ class CreateFamillesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('medicaments');
+        Schema::dropIfExists('familles');
     }
 }

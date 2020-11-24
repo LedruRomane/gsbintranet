@@ -15,7 +15,7 @@ class FamilleSeeder extends Seeder
     public function run()
     {
         DB::unprepared("
-            INSERT INTO `medicaments` (`id`, `reference`, `libelle`) VALUES
+            INSERT INTO `familles` (`id`, `reference`, `libelle`) VALUES
             (1, 'AA', 'Antalgiques en association'),
             (2, 'AAA', 'Antalgiques antipyréques en association'),
             (3, 'AAC', 'Antidépresseur d action centrale'),

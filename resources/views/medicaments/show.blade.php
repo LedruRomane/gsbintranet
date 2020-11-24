@@ -17,19 +17,19 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Nom Commercial:</strong>
-                {{ $medicament->nomCommercial }}
+                <p>{{ $medicament->nomCommercial }}</p>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Composition:</strong>
-                {{ $medicament->composition }}
+                <p>{{ $medicament->composition }}</p>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Effets:</strong>
-                {{ $medicament->effets }}
+                <p>{{ $medicament->effets }}</p>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -40,9 +40,10 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Contre Indications:</strong>
-                {{ $medicament->$famille[idFamille]->libelle }}
+                <strong>Famille du médicament:</strong>
+                {{ $familles[($medicament->idFamille)-1]->libelle }}
             </div>
         </div>
+
     </div>
 @endsection

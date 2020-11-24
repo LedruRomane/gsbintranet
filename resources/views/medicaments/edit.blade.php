@@ -30,29 +30,29 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Nomm Commercial:</strong>
-                    <input type="text" name="nomCommercial" class="form-control" placeholder="Nom Commercial">
+                    <strong>Nom Commercial:</strong>
+                    <input type="text" name="nomCommercial" class="form-control" placeholder="Nom Commercial" value="{{ $medicament->nomCommercial }}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Composition:</strong>
                     <textarea class="form-control" style="height:50px" name="composition"
-                              placeholder="composition"></textarea>
+                              placeholder="{{ $medicament->composition }}" value="{{ $medicament->composition }}"></textarea>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Effets:</strong>
                     <textarea class="form-control" style="height:50px" name="effets"
-                              placeholder="effets"></textarea>
+                              placeholder="{{ $medicament->effets }}" value="{{ $medicament->effets }}"></textarea>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Contre Indications:</strong>
                     <textarea class="form-control" style="height:50px" name="contreIndications"
-                              placeholder="contre Indications"></textarea>
+                              placeholder="{{ $medicament->contreIndications }}" value="{{ $medicament->contreIndications }}"></textarea>
                 </div>
             </div>
             <div class="form-group">
