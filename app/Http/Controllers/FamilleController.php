@@ -14,9 +14,9 @@ class FamilleController extends Controller
      */
     public function index()
     {
-        $familles = Project::latest()->paginate(5);
+        $familles = Famille::latest()->paginate(5);
 
-        return view('familles.index', compact('familles'))
+        return view('medicaments.index', compact('familles'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -27,7 +27,7 @@ class FamilleController extends Controller
      */
     public function create()
     {
-        return view('familles.create');
+        return view('medicaments.create');
     }
 
     /**
@@ -45,7 +45,7 @@ class FamilleController extends Controller
 
         Famille::create($request->all());
 
-        return redirect()->route('familles.index')
+        return redirect()->route('medicaments.index')
             ->with('success', 'Famille created successfully.');
     }
 
@@ -57,7 +57,7 @@ class FamilleController extends Controller
      */
     public function show(Famille $famille)
     {
-        return view('familles.show', compact('famille'));
+        return view('medicaments.show', compact('famille'));
     }
 
     /**
@@ -68,7 +68,7 @@ class FamilleController extends Controller
      */
     public function edit(Famille $famille)
     {
-        return view('familles.edit', compact('famille'));
+        return view('medicaments.edit', compact('famille'));
     }
 
     /**
@@ -86,7 +86,7 @@ class FamilleController extends Controller
         ]);
         $famille->update($request->all());
 
-        return redirect()->route('familles.index')
+        return redirect()->route('medicaments.index')
             ->with('success', 'Famille updated successfully');
     }
 
@@ -100,7 +100,7 @@ class FamilleController extends Controller
     {
         $famille->delete();
 
-        return redirect()->route('familles.index')
+        return redirect()->route('medicaments.index')
             ->with('success', 'Famille deleted successfully');
     }
 }

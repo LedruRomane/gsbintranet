@@ -19,9 +19,10 @@ class CreateMedicamentsTable extends Migration
             $table->string('composition', 100);
             $table->string('effets',100);
             $table->string('contreIndications',100);
+            $table->timestamps();
 
             $table->unsignedBigInteger('idFamille');
-            $table->foreign('idFamille')->references('id')->on('familles');
+            $table->foreign('idFamille')->references('id')->on('medicaments');
         });
     }
 

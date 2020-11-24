@@ -13,9 +13,9 @@ class CreateFamillesTable extends Migration
      */
     public function up()
     {
-        Schema::create('familles', function (Blueprint $table) {
+        Schema::create('medicaments', function (Blueprint $table) {
             $table->id();
-            $table->string('reference');
+            $table->string('reference', 255);
             $table->string('libelle', 80);
             $table->timestamps();
         });
@@ -28,6 +28,6 @@ class CreateFamillesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('familles');
+        Schema::dropIfExists('medicaments');
     }
 }

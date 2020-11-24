@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Famille;
 use App\Models\Medicament;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,7 @@ class MedicamentController extends Controller
      */
     public function index()
     {
-        $medicaments = Project::latest()->paginate(5);
+        $medicaments = Medicament::latest()->paginate(5);
 
         return view('medicaments.index', compact('medicaments'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
@@ -27,7 +28,8 @@ class MedicamentController extends Controller
      */
     public function create()
     {
-        return view('medicaments.create');
+        $familles = Famille::all();
+        return View('medicaments.create',['familles'=>$familles]);
     }
 
     /**
@@ -49,7 +51,7 @@ class MedicamentController extends Controller
         Medicament::create($request->all());
 
         return redirect()->route('medicaments.index')
-            ->with('success', 'Project created successfully.');
+            ->with('success', 'Médicament créé.');
     }
 
     /**
@@ -93,7 +95,7 @@ class MedicamentController extends Controller
         $medicament->update($request->all());
 
         return redirect()->route('medicaments.index')
-            ->with('success', 'Medicament updated successfully');
+            ->with('success', 'Medicament mis à jour');
     }
 
     /**
@@ -107,6 +109,6 @@ class MedicamentController extends Controller
         $medicament->delete();
 
         return redirect()->route('medicaments.index')
-            ->with('success', 'Medicament deleted successfully');
+            ->with('success', 'Medicament bien supprimé');
     }
 }

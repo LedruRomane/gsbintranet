@@ -4,10 +4,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Laravel 8 CRUD </h2>
+                <h2>GSB INTRANET </h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('projects.create') }}" title="Create a project"> <i class="fas fa-plus-circle"></i>
+                <a class="btn btn-success" href="{{ route('medicaments.create') }}" title="Créer un médicament"> <i class="fas fa-plus-circle"></i>
                 </a>
             </div>
         </div>
@@ -21,30 +21,29 @@
 
     <table class="table table-bordered table-responsive-lg">
         <tr>
-            <th>No</th>
-            <th>Name</th>
-            <th>Introduction</th>
-            <th>Location</th>
-            <th>Cost</th>
-            <th>Date Created</th>
-            <th width="280px">Action</th>
+            <th>Numéro</th>
+            <th>nomCommercial</th>
+            <th>composition</th>
+            <th>effets</th>
+            <th>contreIndications</th>
+            <th>Famille</th>
         </tr>
-        @foreach ($projects as $project)
+        @foreach ($medicaments as $medicament)
             <tr>
                 <td>{{ ++$i }}</td>
-                <td>{{ $project->name }}</td>
-                <td>{{ $project->introduction }}</td>
-                <td>{{ $project->location }}</td>
-                <td>{{ $project->cost }}</td>
-                <td>{{ date_format($project->created_at, 'jS M Y') }}</td>
+                <td>{{ $medicament->nomCommercial }}</td>
+                <td>{{ $medicament->composition }}</td>
+                <td>{{ $medicament->effets }}</td>
+                <td>{{ $medicament->contreIndications }}</td>
+                <td>{{ $medicament->idFamille }}</td>
                 <td>
-                    <form action="{{ route('projects.destroy', $project->id) }}" method="POST">
+                    <form action="{{ route('medicaments.destroy', $medicament->id) }}" method="POST">
 
-                        <a href="{{ route('projects.show', $project->id) }}" title="show">
+                        <a href="{{ route('medicaments.show', $medicament->id) }}" title="show">
                             <i class="fas fa-eye text-success  fa-lg"></i>
                         </a>
 
-                        <a href="{{ route('projects.edit', $project->id) }}">
+                        <a href="{{ route('medicaments.edit', $medicament->id) }}">
                             <i class="fas fa-edit  fa-lg"></i>
 
                         </a>
@@ -62,6 +61,6 @@
         @endforeach
     </table>
 
-    {!! $projects->links() !!}
+    {!! $medicaments->links() !!}
 
 @endsection

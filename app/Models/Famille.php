@@ -9,7 +9,7 @@ class Famille extends Model
 {
     use HasFactory;
 
-    protected $table = 'familles';
+    protected $table = 'medicaments';
     public $timestamps = true;
 
     protected $casts = [
@@ -20,4 +20,9 @@ class Famille extends Model
         'reference',
         'libelle'
     ];
+
+    public function medicaments()
+    {
+        return $this->hasMany(Medicament::class, 'idFamille', 'id');
+    }
 }

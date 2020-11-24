@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>App Name - @yield('title')</title>
+    <title>GSB intranet - @yield('title')</title>
 
     <!-- Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css" rel="stylesheet">
@@ -23,6 +23,9 @@
             color: white;
             text-align: center;
         }
+        svg{
+            display:none;
+        }
 
     </style>
 
@@ -38,9 +41,7 @@
 </div>
 <div class="text-center footer">
 
-    <h4>The writer needs a job</h4>
-    <h4>+234 806 605 6233</h4>
-    <h4>kingsconsult001@gmail.com</h4>
+
 
 </div>
 </body>

@@ -14,10 +14,6 @@ use App\Http\Controllers\MedicamentController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::resource(‘medicaments’, MedicamentController::class);
 
-Route::resource(‘familles’, FamilleController::class);
+Route::resource('medicaments', MedicamentController::class);
