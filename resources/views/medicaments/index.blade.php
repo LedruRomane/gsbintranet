@@ -50,8 +50,7 @@
 
                         @csrf
                         @method('DELETE')
-
-                        <button type="submit" title="delete" style="border: none; background-color:transparent;">
+                        <button type="submit" title="delete" onclick="return confirm('Vous allez supprimer un medicament. Etes-vous sûr? ')" style="border: none; background-color:transparent;">
                             <i class="fas fa-trash fa-lg text-danger"></i>
 
                         </button>
