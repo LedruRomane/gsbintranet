@@ -103,4 +103,18 @@ class FamilleController extends Controller
         return redirect()->route('medicaments.index')
             ->with('success', 'Famille deleted successfully');
     }
+    /**
+     * Show tabulation with medicaments from a spectific famille
+     * @return \Illuminate\Http\Response
+     */
+    public function medicaments(Famille $famille)
+    {
+        $famille->load('medicaments');
+        $familles = Famille::all();
+
+        return view('medicaments.medicaments', [
+            'famille' => $famille,
+            'familles' => $familles
+        ]);
+    }
 }

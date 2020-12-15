@@ -3,10 +3,10 @@
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
+            <div class="pull-left" style="margin-top:2%;margin-bottom:2%;">
                 <h2>Ajouter Médicament</h2>
             </div>
-            <div class="pull-right">
+            <div class="pull-right" style="margin-top:2%;margin-bottom:2%;">
                 <a class="btn btn-primary" href="{{ route('medicaments.index') }}" title="Retour"> <i class="fas fa-backward "></i> </a>
             </div>
         </div>
@@ -28,7 +28,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Nomm Commercial:</strong>
+                    <strong>Nom Commercial:</strong>
                     <input type="text" name="nomCommercial" class="form-control" placeholder="Nom Commercial">
                 </div>
             </div>
@@ -53,15 +53,19 @@
                               placeholder="contre Indications"></textarea>
                 </div>
             </div>
-            <div class="form-group">
-                <select class="form-control" name="idFamille">
-                    @foreach($familles as $famille)
-                        <option value="{{$famille->id}}">{{$famille->libelle}}</option>
-                    @endforeach
-                </select>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Famille: </strong>
+                    <select class="form-control" name="idFamille">
+                        @foreach($familles as $famille)
+                            <option value="{{$famille->id}}">{{$famille->libelle}}</option>
+                        @endforeach
+                    </select>
+                </div>
             </div>
+
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Enregistrer</button>
             </div>
         </div>
 
