@@ -56,6 +56,6 @@
         @endforeach
     </table>
 
-    {{ $medicaments->links() }}
+    {{ $medicaments->links('pagination::bootstrap-4') }}
 
 @endsection
