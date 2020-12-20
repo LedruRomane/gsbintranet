@@ -26,6 +26,7 @@
         </tr>
         @foreach ($famille->medicaments as $medicament)
             <tr>
+                <td>{{$medicament->id}}</td>
                 <td>{{ $medicament->nomCommercial }}</td>
                 <td>{{ $medicament->composition }}</td>
                 <td>{{ $medicament->effets }}</td>
