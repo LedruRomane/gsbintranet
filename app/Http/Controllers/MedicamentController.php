@@ -63,8 +63,12 @@ class MedicamentController extends Controller
      */
     public function show(Medicament $medicament)
     {
+        $familles = Famille::all();
         $medicament->load('famille');
-        return View('medicaments.show', compact('medicament'));
+        return View('medicaments.show', [
+            'medicament' => $medicament,
+            'familles' => $familles
+        ]);
     }
 
     /**

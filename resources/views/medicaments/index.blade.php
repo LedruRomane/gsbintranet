@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left" style="margin-top:5%;margin-bottom:5%;">
-                <h2>GSB INTRANET : tout les médicaments</h2>
+                <h2>GSB INTRANET : touts les médicaments</h2>
             </div>
         </div>
     </div>

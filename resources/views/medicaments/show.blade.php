@@ -2,13 +2,13 @@
 
 
 @section('content')
-    <div class="row">
+    <div class="row" style="margin-top:3%;">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
                 <h2>  {{ $medicament->nomCommercial }}</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('medicaments.index') }}" title="Retour"> <i class="fas fa-backward "></i> </a>
+                <a class="btn btn-primary" href="{{ route('medicaments.index') }}" title="Retour">Retour <i class="fas fa-backward "></i> </a>
             </div>
         </div>
     </div>

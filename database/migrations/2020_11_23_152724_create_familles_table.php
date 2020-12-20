@@ -16,7 +16,7 @@ class CreateFamillesTable extends Migration
         Schema::create('familles', function (Blueprint $table) {
             $table->id();
             $table->string('reference', 255);
-            $table->string('libelle', 80);
+            $table->string('libelle', 255);
             $table->timestamps();
         });
     }

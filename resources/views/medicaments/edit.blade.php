@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="row">
+    <div class="row" style="margin-top:3%;">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
                 <h2>Editer Médicaments</h2>
@@ -38,32 +38,35 @@
                 <div class="form-group">
                     <strong>Composition:</strong>
                     <textarea class="form-control" style="height:50px" name="composition"
-                              placeholder="{{ $medicament->composition }}" value="{{ $medicament->composition }}"></textarea>
+                              placeholder="{{ $medicament->composition }}">{{ $medicament->composition }}</textarea>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Effets:</strong>
                     <textarea class="form-control" style="height:50px" name="effets"
-                              placeholder="{{ $medicament->effets }}" value="{{ $medicament->effets }}"></textarea>
+                              placeholder="{{ $medicament->effets }}">{{ $medicament->effets }}</textarea>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Contre Indications:</strong>
                     <textarea class="form-control" style="height:50px" name="contreIndications"
-                              placeholder="{{ $medicament->contreIndications }}" value="{{ $medicament->contreIndications }}"></textarea>
+                              placeholder="{{ $medicament->contreIndications }}">{{ $medicament->contreIndications }}</textarea>
                 </div>
             </div>
-            <div class="form-group">
-                <select class="form-control" name="idFamille">
-                    @foreach($familles as $famille)
-                        <option value="{{$famille->id}}">{{$famille->libelle}}</option>
-                    @endforeach
-                </select>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Famille:</strong>
+                    <select class="form-control" name="idFamille">
+                        @foreach($familles as $famille)
+                            <option value="{{$famille->id}}">{{$famille->libelle}}</option>
+                        @endforeach
+                    </select>
+                </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Enregistrer</button>
             </div>
         </div>
 

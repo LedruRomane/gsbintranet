@@ -1,5 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light menuBack menuShadow">
     <a class="navbar-brand" href="{{route('index')}}"><img src="{{ url('images/logo.png') }}" style="height:70px;"/></a>
+    <h2>INTRANET</h2>
     <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
         <ul class="navbar-nav">
             <li class="nav-item active">
