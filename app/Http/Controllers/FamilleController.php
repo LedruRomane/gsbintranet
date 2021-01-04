@@ -114,7 +114,8 @@ class FamilleController extends Controller
 
         return view('medicaments.medicaments', [
             'famille' => $famille,
-            'familles' => $familles
+            'familles' => $familles,
+            'user' => auth()->user()
         ]);
     }
 }

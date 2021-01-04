@@ -14,11 +14,12 @@ use App\Http\Controllers\MedicamentController;
 |
 */
 
+Route::get('/',[\App\Http\Controllers\MedicamentController::class,'index'])->name('index');
+
 Route::prefix('familles')->name('familles.')->group(function () {
     Route::get('/', [\App\Http\Controllers\FamilleController::class, 'index'])->name('index');
     Route::get('{famille}/medicaments', [\App\Http\Controllers\FamilleController::class, 'medicaments'])->name('medicaments');
 });
-Route::get('/',[\App\Http\Controllers\MedicamentController::class,'index'])->name('index');
 
 Route::resource('medicaments', MedicamentController::class);
 
