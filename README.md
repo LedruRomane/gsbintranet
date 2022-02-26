@@ -1,7 +1,9 @@
 ## Requirement 
 
 PHP >= 7.3
+
 MYSQL 8
+
 NODE/NPM
 
 ## Installation
