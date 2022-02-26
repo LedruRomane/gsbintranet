@@ -2,7 +2,7 @@
 
 PHP >= 7.3
 
-MYSQL 8
+MYSQL >= 5.7
 
 NODE/NPM
 
